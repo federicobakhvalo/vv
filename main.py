@@ -7,9 +7,16 @@ import requests
 
 
 class Test:
+    def __init__(self, test=None):
+        self.test = test
+
+    def set(self, c):
+        self.test = c
+
     def get(self):
         return 'hello'
 
 
 ex = Test()
+ex.set('f')
 print(ex.get())
